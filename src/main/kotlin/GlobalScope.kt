@@ -21,6 +21,6 @@ fun main() { // main thread
         println("Dummy fake work ended → ${Thread.currentThread().name}")
     }
 
-    Thread.sleep(6000) // waiting for coroutine to finish
+    Thread.sleep(6000) // blocks main thread and waits for coroutine to finish
     println("Main program ended → ${Thread.currentThread().name}")
 }
