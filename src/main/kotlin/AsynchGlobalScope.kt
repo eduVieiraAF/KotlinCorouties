@@ -7,7 +7,8 @@ fun main() = runBlocking {
 
     println("Main program started → ${Thread.currentThread().name}")
 
-    val jobDeferred: Deferred<Unit> = GlobalScope.async {// does not return a job object but a deferred object
+    val jobDeferred: Deferred<Unit> = GlobalScope.async {// does not return a job object but a
+        // deferred object and can return some data
         println("Dummy fake work started → ${Thread.currentThread().name}")
 
         for (i in 0..4) {
