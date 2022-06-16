@@ -4,7 +4,7 @@ fun main() = runBlocking { // main thread
 
     println("Main program started → ${Thread.currentThread().name}")
 
-    launch {
+    val job: Job = launch {
         println("Dummy fake work started → ${Thread.currentThread().name}")
 
         for (i in 0..4) {
@@ -15,9 +15,8 @@ fun main() = runBlocking { // main thread
         println("Dummy fake work ended → ${Thread.currentThread().name}")
     }
 
-    withContext(Dispatchers.IO) {
-        Thread.sleep(6000)
-    }
+    // job.cancel() can cancel coroutine
+    job.join() // will wait for coroutine to finish its execution → no need for delay or sleep or hard code time
 
     println("Main program ended → ${Thread.currentThread().name}")
 }
