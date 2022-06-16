@@ -16,5 +16,5 @@
  *
  * GlobalScope.launch { } → Companion object and will run in the Global level
  *
- * runBlocking { }
+ * runBlocking { } → best used for testing
  */

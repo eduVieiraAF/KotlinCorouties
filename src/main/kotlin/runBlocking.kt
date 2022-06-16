@@ -24,3 +24,8 @@ suspend fun doSomething() {
     }
     println("Now it's over")
 }
+
+suspend fun mySuspendingFunction() {
+    delay(1000)
+    // do something
+}
