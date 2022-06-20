@@ -28,4 +28,6 @@ Two ways to make a coroutine cooperative:
  • Explicitly check for the cancellation status within the coroutine:
    • CoroutineScope.is Active boolean flag
 
- withTimeOut()
+ withTimeout() → defines a length of time in which coroutines will execute the code or be ended
+
+ withTimeoutOrNull() → similar to withTimeout() but it returns some value from the coroutine.
