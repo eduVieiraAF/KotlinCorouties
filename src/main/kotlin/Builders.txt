@@ -24,3 +24,6 @@ Two ways to make a coroutine cooperative:
  • Periodically invoke a suspending function that checks for cancellation;
    • Only suspending functions from the 'kotlinx.coroutines' package will make coroutine cooperative →
      • delay(), yield(), withContext(), withTimeOut(), etc
+
+ • Explicitly check for the cancellation status within the coroutine:
+   • CoroutineScope.is Active boolean flag
