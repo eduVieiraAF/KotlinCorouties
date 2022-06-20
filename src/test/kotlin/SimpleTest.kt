@@ -7,6 +7,6 @@ class SimpleTest {
     @Test
     fun myTest() = runBlocking {// runBlocking is best used for testing
         mySuspendingFunction()
-        Assert.assertEquals(10,5 + 5)
+        Assert.assertEquals(10, 5 + 5)
     }
 }
