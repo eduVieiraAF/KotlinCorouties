@@ -18,4 +18,5 @@ fun main() = runBlocking {
     println("Main program ended → ${Thread.currentThread().name}")
 }
 // with async suspend functions will be executed concurrently or in parallel
+// with launch, suspend function will also be executed in parallel but a String cannot be returned
 
